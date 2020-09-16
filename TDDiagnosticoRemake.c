@@ -23,9 +23,19 @@ void capturarINT(){
     printf("Promedio: %.2f\n\n",promedio); getchar();
 }
 
+void mostrar(int n, char cadena[]){
+
+    for (size_t i = 0; i < n; i++){
+        printf("%s",cadena);
+    }
+    printf("\n"); getchar();
+
+}
+
 int main(){
 
-    char op;
+    char op, cadena[20];
+    int n;
 
     do{
         printf("1) Capturar enteros.\n");
@@ -43,6 +53,12 @@ int main(){
             break;
 
             case '2':
+                printf("Escribe una cadena de hasta 20 caracteres: ");
+                fflush(stdin);
+                fgets(cadena, sizeof(cadena), stdin);
+                printf("\nn: ");
+                scanf("%i",&n);
+                mostrar(n, cadena);
             break;
 
             case '3':
