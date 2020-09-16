@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include"personaje.h"
 
 void capturarINT(){
     int enteros[5];
@@ -41,6 +42,7 @@ int main(){
         printf("1) Capturar enteros.\n");
         printf("2) Mostrar cadena n veces.\n");
         printf("3) Agregar personajes.\n");
+        printf("4) Mostrar personajes.\n");
         printf("0) Salir.\n\n");
         printf("OPCION: ");
         scanf("%c",&op);
@@ -62,6 +64,11 @@ int main(){
             break;
 
             case '3':
+                capturar_pers();
+            break;
+
+            case '4':
+                mostrar_pers();
             break;
 
             default:
